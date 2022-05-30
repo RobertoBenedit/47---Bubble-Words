@@ -21,6 +21,16 @@ window.addEventListener("mousemove", function (event) {
     mouse.y = event.y;
 });
 
+//make it to mobile debices
+window.addEventListener("touchmove", function (event) {
+    mouse.x = event.touches[0].clientX;
+    mouse.y = event.touches[0].clientY;
+});
+window.addEventListener("touchstart", function () {
+    mouse.x = event.touches[0].clientX;
+    mouse.y = event.touches[0].clientY;
+});
+
 ctx.fillStyle = "white";
 ctx.font = "25px Arial";
 ctx.fillText("Beto", 0, 30);
